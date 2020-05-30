@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<htmml>
+	<h1> Crie a pessoa </h1>
+		<form method='POST' enctype="multipart/form-data">{% csrf_token %}
+			<input type='text' name='nome' placeholder='seu nome'>
+			<div>
+			<input type='text' name='apelidio' placeholder='seu apelidio'>
+			</div>
+			<div>
+			<input type='file' name='foto' >
+			</div>
+			<input type='submit' value='Salvar'>
+		</form>
+</htmml>
+
+{% endblock %}

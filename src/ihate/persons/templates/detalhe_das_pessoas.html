@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<htmml>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/stylePerson.css' %}">
+	<div id="cantainer">
+		<div id="content">
+			<image src="{{ object.foto.url }}">
+		</div>
+		<div id="left">
+			<ul>
+				<li>{{ object.nome }}</li>
+				<li>{{ object.apelidio }}</li>
+			</ul>
+		</div>
+	</div>	
+</htmml>
+
+{% endblock %}

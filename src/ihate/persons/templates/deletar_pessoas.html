@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<htmml>
+	<form actino="." method="POST">{% csrf_token %}
+		<h1>Voce quer mesmo deletar a pessoa {{ object.title }}?</h1>
+		<p><input type='submit' value='sim' />  <a href=''>cancelar</a></p>
+</htmml>
+
+{% endblock %}
