@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from persons.views import Proprio_usuarioView, Create_pessoaView, Delete_pessoaView, Pessoa_loginView
+from persons.views import Proprio_usuarioView, Create_pessoaView, Delete_pessoaView, Pessoa_loginView, Lista_pessoasView
 
 app_name = 'persons'
 urlpatterns = [
@@ -27,6 +27,7 @@ urlpatterns = [
     path('pessoas/create', Create_pessoaView.as_view()),
     path('pessoas/<int:id>/delete', Delete_pessoaView.as_view()),
     path('pessoas/login', Pessoa_loginView.as_view(),name="home"),
+    path('lista_pessoas', Lista_pessoasView.as_view()),
 ]
 
 if settings.DEBUG:
