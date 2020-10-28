@@ -1,2 +1,1 @@
-# ihate
 social network
